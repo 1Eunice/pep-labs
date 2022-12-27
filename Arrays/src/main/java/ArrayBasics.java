@@ -27,7 +27,7 @@ public class ArrayBasics {
      * @return the element at index n of arr.
      */
     public int getNthElementOfArray(int[] arr, int n){
-        return 0;
+        return arr[n];
     }
 
     /**
