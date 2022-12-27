@@ -10,6 +10,8 @@
  * https://www.learnjavaonline.org/en/Arrays
  */
 public class ArrayBasics {
+    private int[] arr;
+
     /**
      * @param arr the array we're getting data from.
      * @return the length of arr.
@@ -39,6 +41,9 @@ public class ArrayBasics {
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
     public void setNthElementOfArray(int[] arr, int n, int val){
+        for (int i=0; i < arr.length;){
+            System.out.println(arr[i]);
+        }
 
     }
 
@@ -46,7 +51,8 @@ public class ArrayBasics {
      * @param n the size of the array we wish to create
      * @return a new int array that can contain n elements.
      */
-    public int[] returnNewArraySizeN(int n){
-        return null;
+    public int[] returnNewArraySizeN(int n){ 
+        return arr = new int[n];
+        
     }
 }
