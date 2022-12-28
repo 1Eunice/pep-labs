@@ -16,7 +16,7 @@ public class ArrayBasics {
      * @param arr the array we're getting data from.
      * @return the length of arr.
      */
-    public int getLengthOfArray(int[] arr){
+    public int getLengthOfArray(int[] arr){   
         return arr.length;
     }
 
@@ -29,7 +29,7 @@ public class ArrayBasics {
      * @return the element at index n of arr.
      */
     public int getNthElementOfArray(int[] arr, int n){
-        return arr[n];
+        return (n);
     }
 
     /**
@@ -41,9 +41,7 @@ public class ArrayBasics {
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
     public void setNthElementOfArray(int[] arr, int n, int val){
-        for (int i=0; i < arr.length;){
-            System.out.println();
-        }
+       return;
     }
 
     /**
@@ -51,8 +49,7 @@ public class ArrayBasics {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){ 
-        int[] arr = new int[n];
-        return arr; 
+        return arr = new int[n];
     }
 }
 
