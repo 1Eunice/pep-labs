@@ -42,9 +42,8 @@ public class ArrayBasics {
      */
     public void setNthElementOfArray(int[] arr, int n, int val){
         for (int i=0; i < arr.length;){
-            System.out.println(arr[i]);
+            System.out.println();
         }
-
     }
 
     /**
