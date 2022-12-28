@@ -45,5 +45,6 @@ public class WhileLoop {
         }
 
         return sum;
+    
     }
 }
