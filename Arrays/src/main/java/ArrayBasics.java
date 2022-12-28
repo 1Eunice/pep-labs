@@ -41,8 +41,7 @@ public class ArrayBasics {
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
     public void setNthElementOfArray(int[] arr, int n, int val){  
-        for (int i=0; i < arr.length; i++);
-        System.out.println(arr[n]);
+        arr[n] = val;
         }
 
 
