@@ -10,7 +10,7 @@
  * https://www.learnjavaonline.org/en/Arrays
  */
 public class ArrayBasics {
-    private int[] arr;
+    public int[] arr;
 
     /**
      * @param arr the array we're getting data from.
@@ -51,7 +51,8 @@ public class ArrayBasics {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){ 
-        return arr = new int[n];
-        
+        int[] arr = new int[n];
+        return arr; 
     }
 }
+
