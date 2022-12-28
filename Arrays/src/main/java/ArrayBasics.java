@@ -29,7 +29,7 @@ public class ArrayBasics {
      * @return the element at index n of arr.
      */
     public int getNthElementOfArray(int[] arr, int n){
-        return (n);
+        return arr[n];
     }
 
     /**
@@ -40,9 +40,11 @@ public class ArrayBasics {
      * @param val the value that we will assign to a spot in the array.
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
-    public void setNthElementOfArray(int[] arr, int n, int val){
-       return;
-    }
+    public void setNthElementOfArray(int[] arr, int n, int val){  
+        for (int i=0; i < arr.length; i++);
+        System.out.println(arr[n]);
+        }
+
 
     /**
      * @param n the size of the array we wish to create
