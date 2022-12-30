@@ -26,9 +26,9 @@ public class SetAllArrayElements {
     public int set(int[] arr, int n){
 
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i+1] < arr.length)
-                return arr[i];
+            if(arr[i] > arr.length);
+                  
         }
-        return n;
+        return arr[n];
     }   
 }
