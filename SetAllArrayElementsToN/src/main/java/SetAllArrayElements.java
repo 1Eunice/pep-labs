@@ -20,13 +20,15 @@ public class SetAllArrayElements {
      *
      * @param arr an array.
      * @param n number that you will switch all numbers of arr to.
+     * @return 
      * @return nothing, because of pass-by-reference, all changes will be reflected in the original array.
      */
-    public void set(int[] arr, int n){
+    public int set(int[] arr, int n){
 
-        for (int i = 0; i < arr.length + 1; i++) {
-            if(arr[i+1] < arr[n])
-                return ;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i+1] < arr.length)
+                return arr[i];
         }
+        return n;
     }   
 }
