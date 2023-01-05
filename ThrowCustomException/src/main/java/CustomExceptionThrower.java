@@ -7,9 +7,18 @@ public class CustomExceptionThrower {
      * exceptions could provide valuable information for when something goes wrong in the application.
      *
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
+     * @throws CustomException
      */
-    public void throwCustomException(){
-
+    public int throwCustomException(int a, int b) throws CustomException{
+        if(a % 2 == 0){
+           throw new CustomException("First input is even"); 
+        }else if (b % 2 == 0){
+            throw new CustomException("Second input is even");
+        }
+        return a + b;
     }
 
 }
+    
+
+
