@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class CustomExceptionThrower {
 
@@ -9,13 +10,19 @@ public class CustomExceptionThrower {
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
      * @throws CustomException
      */
-    public int throwCustomException(int a, int b) throws CustomException{
-        if(a % 2 == 0){
-           throw new CustomException("First input is even"); 
-        }else if (b % 2 == 0){
-            throw new CustomException("Second input is even");
+    public int throwCustomException() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number between 1 and 10: ");
+
+        try{
+        int num = sc.nextInt();
+        if (num < 1 || num > 10) {
+            throw new CustomException();
         }
-        return a + b;
+        }catch (CustomException ce){
+            System.out.println(ce.getMessage());
+        }
+        return 0;  
     }
 
 }
