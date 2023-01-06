@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class CustomExceptionThrower {
-    public static int main(String[] args){
 
     /**
      * This method should throw a CustomException. CustomException is a custom exception that we've written ourselves
@@ -11,22 +10,24 @@ public class CustomExceptionThrower {
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
      * @throws CustomException
      */
-    public int  throwCustomException() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10: ");
+    public void throwCustomException(){
+        
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a number between 1 and 10: ");
 
-        try{
-        int num = sc.nextInt();
-        if (num < 1 || num > 10) {
-            throw new CustomException();
-        }
-        }catch (CustomException ce){
-            System.out.println(ce.getMessage());
-        }
-        return 0;  
+            try{
+            int num = sc.nextInt();
+            if (num < 1 || num > 10) {
+                throw new CustomException();
+            }
+            }catch (CustomException ce){
+                System.out.println(ce.getMessage());
+            }
+        }    
     }
 }
-}
+
+
 
 
     
