@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class CustomExceptionThrower {
 
     /**
@@ -11,21 +9,18 @@ public class CustomExceptionThrower {
      * @throws CustomException
      */
     public void throwCustomException(){
-        
-        try (Scanner sc = new Scanner(System.in)) {
-            System.out.println("Enter a number between 1 and 10: ");
-
             try{
-            int num = sc.nextInt();
-            if (num < 1 || num > 10) {
+                int num = 7;
+                if(num >= 7){
                 throw new CustomException();
-            }
-            }catch (CustomException ce){
-                System.out.println(ce.getMessage());
-            }
-        }    
+                }
+            }catch (CustomException e){
+                System.out.println(e.getMessage());
+
+        }       
     }
 }
+
 
 
 

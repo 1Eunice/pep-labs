@@ -6,7 +6,7 @@
  */
 public class CustomException extends Exception {
     public CustomException() {
-        super("Invalid number.");
+        super("Invalid");
     }
     public CustomException(String message){
         super (message);
