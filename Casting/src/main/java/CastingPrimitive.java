@@ -16,6 +16,7 @@ public class CastingPrimitive {
      * @return the int form of d.
      */
     public int castToInt(double d){
-        return 0;
+        double num = Double.valueOf(d);
+        return (int) num;
     }
 }
