@@ -26,7 +26,6 @@ public class BankService {
         this.balance += amount;
         return;
     }
-
     /**
      * TODO: implement functionality to decrease the user's balance by an amount.
      * If a withdrawl would result in the user having a negative balance, the withdrawl should not occur.
@@ -39,11 +38,6 @@ public class BankService {
         }
         return this.balance -= amount;
     }  
-        
-
-
-    
-
     /**
      * There is no need to change this method, it will be used in testing and in the menu class.
      * @return the user's balance.
