@@ -8,16 +8,8 @@ public class CustomExceptionThrower {
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
      * @throws CustomException
      */
-    public void throwCustomException(){
-            try{
-                int num = 7;
-                if(num >= 7){
-                throw new CustomException();
-                }
-            }catch (CustomException e){
-                System.out.println(e.getMessage());
-
-        }       
+    public void throwCustomException() throws CustomException{
+        throw new CustomException();      
     }
 }
 
