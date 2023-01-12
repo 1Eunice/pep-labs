@@ -13,7 +13,11 @@ public class DoesNotContain {
      * @return true if arr does not contain target. false otherwise.
      */
     public boolean arrayDoesNotContain(int[] arr, int target){
-        
+        for(int c : arr){
+            if(c.DoesNotContain(target)){
+                return true;
+            }
+        }
         return false;
        
     }
