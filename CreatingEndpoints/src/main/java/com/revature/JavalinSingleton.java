@@ -15,7 +15,7 @@ public class JavalinSingleton {
         Javalin app = Javalin.create();
         
         app.get("/hello", ctx ->{
-            ctx.result("get request endpoint hit!");
+            ctx.result("Hello World");
         });
 
         return app;
