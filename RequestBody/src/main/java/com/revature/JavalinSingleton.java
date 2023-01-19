@@ -43,9 +43,6 @@ public class JavalinSingleton {
             String jsonStringToBeReturned = om.writeValueAsString(song);
             ctx.result(jsonStringToBeReturned);
         });
-
-
         return app;
     }
-    
 }
