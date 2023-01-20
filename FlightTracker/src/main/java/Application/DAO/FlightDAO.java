@@ -2,6 +2,7 @@ package Application.DAO;
 
 import Application.Model.Flight;
 import Application.Util.ConnectionUtil;
+import kotlin.reflect.KProperty.Getter;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -62,17 +63,18 @@ public class FlightDAO {
      *
      * @param id a flight ID.
      */
-    public boolean getFlightById(int id){
+    public Flight getFlightById(int id){
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "select * from flight where flight_id =?;";
+            String sql = "select * from flight where flight_id =?";
             
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setString and setInt methods here.
+
             preparedStatement.setInt(1, id);
-            preparedStatement.executeQuery();
+            
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
@@ -114,9 +116,9 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //write preparedStatement's setString and setInt methods here.
-            preparedStatement.setString(1, sql);
-            preparedStatement.setString(2, sql);
-            preparedStatement.executeUpdate();
+            preparedStatement.setString(1, flight.departure_city);
+            preparedStatement.setString(2, flight.arrival_city);
+            
 
 
             preparedStatement.executeUpdate();
@@ -147,18 +149,19 @@ public class FlightDAO {
      *
      * @param id a flight ID.
      * @param flight a flight object.
+     * 
      */
-    public void updateFlight(int id, Flight flight){
+    public Flight updateFlight(int id, Flight flight){
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "update flight set id=? where flight=?;";
+            String sql = "update flight set departure_city =?, arrival_city where flight_id =?;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
-            preparedStatement.setString(1, sql);
-            preparedStatement.setInt(2, id);
-            preparedStatement.executeUpdate();
+            preparedStatement.setString(1, flight.departure_city);
+            preparedStatement.setString(2, flight.arrival_city);
+            preparedStatement.setInt(3, id);
 
 
             preparedStatement.executeUpdate();
@@ -195,7 +198,7 @@ public class FlightDAO {
             //write PreparedStatement setString and setInt methods here.
             preparedStatement.setString(1, departure_city);
             preparedStatement.setString(2, arrival_city);
-            preparedStatement.executeQuery();
+            
             
 
 

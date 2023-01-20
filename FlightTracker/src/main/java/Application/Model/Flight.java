@@ -15,8 +15,9 @@ public class Flight {
 
     /**
      * A default, no-args constructor is REQUIRED for Jackson ObjectMapper to work.
+     * @param flight
      */
-    public Flight(){
+    public Flight(Flight flight){
 
     }
     /**
