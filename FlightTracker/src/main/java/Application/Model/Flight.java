@@ -9,6 +9,7 @@ import java.util.Objects;
  * Do not change anything in this class.
  */
 public class Flight {
+    public static Object update;
     public int flight_id;
     public String departure_city;
     public String arrival_city;

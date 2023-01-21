@@ -45,9 +45,11 @@ public class FlightService {
      *         inform our provide the front-end client with information about the added Flight.
      */
     public Flight addFlight(Flight flight){
-        Flight.add(new Flight(flight));
-        return flight;
+        return flightDAO.insertFlight(flight);
+        
+
     }
+        
 
     /**
      * TODO: Use the FlightDAO to update an existing flight from the database.
