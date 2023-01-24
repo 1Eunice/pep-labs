@@ -36,10 +36,8 @@ public class Pyramid {
                 a=a + "" ;
                 a =a + "*";
             }
-
             a=a + "\n";
         }
-           
         return a;
     }
 }
