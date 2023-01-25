@@ -50,10 +50,10 @@ public class BookService {
      * @return book if it was successfully persisted, null if it was not successfully persisted (eg if the book primary
      * key was already in use.)
      */
-    public Book addBook(Book book) {
+    public Book addBook(int book) {
         bookDAO.insertBook(book);
         if(bookDAO.equals(book)){
-        return book;
+        return bookDAO.getBookByIsbn(book);
         }
         return null;
     

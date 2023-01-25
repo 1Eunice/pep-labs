@@ -84,7 +84,7 @@ public class BookDAO {
      * database, and as a primary key, it would make sense for the client to submit an ISBN when submitting a book.
      * You only need to change the sql String and leverage PreparedStatement's setString and setInt methods.
      */
-    public Book insertBook(Book book){
+    public Book insertBook(int book){
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here

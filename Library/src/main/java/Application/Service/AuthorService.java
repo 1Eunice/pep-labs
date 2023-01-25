@@ -51,7 +51,7 @@ public class AuthorService {
      * @return The persisted author if the persistence is successful.
      */
     public Author addAuthor(Author author) {
-        authorDAO.insertAuthor(author);
+        authorDAO.insertAuthor(addAuthor(author));
         return author;
     }
 }
