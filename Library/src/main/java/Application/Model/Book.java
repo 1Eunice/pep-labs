@@ -91,4 +91,8 @@ public class Book {
                 ", copies_available=" + copies_available +
                 '}';
     }
+
+    public Book get(int i) {
+        return null;
+    }
 }
