@@ -40,6 +40,7 @@ public class AuthorService {
      * @return all authors
      */
     public List<Author> getAllAuthors() {
+        authorDAO.getAllAuthors();
         
         return authorDAO.getAllAuthors();
     }
@@ -50,6 +51,7 @@ public class AuthorService {
      * @return The persisted author if the persistence is successful.
      */
     public Author addAuthor(Author author) {
-        return null;
+        authorDAO.insertAuthor(author);
+        return author;
     }
 }
