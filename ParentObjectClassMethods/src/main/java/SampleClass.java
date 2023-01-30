@@ -56,10 +56,15 @@ public class SampleClass {
     public boolean b;
 
     //    implement a custom .equals(SampleClass other){} method here.
-    public boolean equals(SampleClass other){
+    @Override
+    public boolean equals(Object other){
         //code here
-
-        return b;
+        SampleClass anotherSampleClass = (SampleClass)other;
+        if(a == anotherSampleClass.a ){
+            if(b == anotherSampleClass.b)
+            return true;
+        }
+        return false;
         }
 
 
