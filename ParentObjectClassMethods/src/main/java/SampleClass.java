@@ -67,8 +67,6 @@ public class SampleClass {
         return false;
         }
 
-
-
     //    implement a custom .toString(){} method here.
     @Override
     public String toString(){
@@ -77,6 +75,4 @@ public class SampleClass {
         return "SampleClass{"+"a='" + a + '\'' + ", b=" + b +'}';
         
     }
-
-    
 }
