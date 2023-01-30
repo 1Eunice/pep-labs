@@ -70,9 +70,11 @@ public class SampleClass {
 
 
     //    implement a custom .toString(){} method here.
+    @Override
     public String toString(){
         //code here
-        return null;
+        
+        return "SampleClass{"+"a='" + a + '\'' + ", b=" + b +'}';
         
     }
 
