@@ -1,3 +1,5 @@
+
+
 /**
  * Notice that we are IMPLEMENTING the comparable interface, for type of ObjectToBeCompared.
  * This means that we must implement a method compareTo, otherwise the code will not compile. This compareTo method
@@ -18,6 +20,16 @@
 
 public class SampleClassC implements Comparable<SampleClassC>{
     int val;
+    public SampleClassC(int val){
+        super();
+        this.val = val;
+    }
+    public int getVal(){
+        return val;
+    }
+    public void setVal(int val){
+        this.val = val;
+    }
     /**
      * TODO: implement compareTo for this class
      *
@@ -26,9 +38,20 @@ public class SampleClassC implements Comparable<SampleClassC>{
      *
      * @param other another object of type SampleClassC, which we are comparing to 'this' object.
      */
+    @Override
     public int compareTo(SampleClassC other) {
         
-        return 0;
-    }
-
+        if(this.val < other.getVal()){
+            return -1;
+        }
+        else if(this.val > other.getVal()){
+            return 1;
+        }
+        else return 0;   
+        
+    
+        
+    }   
 }
+
+

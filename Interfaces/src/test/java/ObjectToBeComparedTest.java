@@ -9,9 +9,9 @@ public class ObjectToBeComparedTest {
      */
     @Test
     public void comparableObjectTest1(){
-        SampleClassC obj1 = new SampleClassC();
+        SampleClassC obj1 = new SampleClassC(0);
         obj1.val = 1;
-        SampleClassC obj2 = new SampleClassC();
+        SampleClassC obj2 = new SampleClassC(0);
         obj2.val = 1;
         Assert.assertTrue(obj1.compareTo(obj2) == 0);
     }
@@ -21,9 +21,9 @@ public class ObjectToBeComparedTest {
      */
     @Test
     public void comparableObjectTest2(){
-        SampleClassC obj1 = new SampleClassC();
+        SampleClassC obj1 = new SampleClassC(0);
         obj1.val = 0;
-        SampleClassC obj2 = new SampleClassC();
+        SampleClassC obj2 = new SampleClassC(0);
         obj2.val = 1;
         Assert.assertTrue(obj1.compareTo(obj2) < 0);
     }
@@ -32,9 +32,9 @@ public class ObjectToBeComparedTest {
      */
     @Test
     public void comparableObjectTest3(){
-        SampleClassC obj1 = new SampleClassC();
+        SampleClassC obj1 = new SampleClassC(0);
         obj1.val = 1;
-        SampleClassC obj2 = new SampleClassC();
+        SampleClassC obj2 = new SampleClassC(0);
         obj2.val = 0;
         Assert.assertTrue(obj1.compareTo(obj2) > 0);
     }
