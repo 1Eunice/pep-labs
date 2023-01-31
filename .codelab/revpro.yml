@@ -938,9 +938,9 @@
     :count_tests: 3
     :count_tests_passed: 1
     :tests:
-      comparableObjectTest1: 0
+      comparableObjectTest1: 1
       comparableObjectTest2: 0
-      comparableObjectTest3: 1
+      comparableObjectTest3: 0
   Generic:
     :Week: 8
     :Order: 4
