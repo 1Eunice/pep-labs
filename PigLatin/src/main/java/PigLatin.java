@@ -16,7 +16,20 @@ public class PigLatin {
      * @param in A string.
      * @return the pig latin form of in.
      */
-    public String returnPigLatin(String in){
-        return "";
+    static boolean isVowel(char ch){
+        return (ch == 'A' || ch == 'a' || ch == 'E' || ch == 'e' || ch == 'I' || ch == 'i' || ch == 'O' || ch == 'o' || ch == 'U' || ch == 'u');
+    }
+    static String returnPigLatin(String in){
+        int len = in.length();
+        int index = -1;
+        for(int i =0; i < len; i++){
+            if(isVowel(in.charAt(i))){
+                index = i;
+                break;
+            }
+        }
+        if(index == -1)
+            return " -1";
+        return in.substring(index) + in.substring(0, index) + "ay";
     }
 }
