@@ -1,9 +1,6 @@
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Map.Entry;
-
-import javafx.util.Pair;
 
 public class MostCommonCharacter {
     /**
@@ -14,48 +11,49 @@ public class MostCommonCharacter {
      * @return the most common character within str.
      */
     public char recurringChar(String str) {
-        Pair<Character, Integer> maxCharCountPair = getMostRepeatedCharacterFromString(str);
-        maxCharCountPair.getKey();
-        maxCharCountPair.getValue();
-        return 0;
-    }
+        char chars [];
+        chars = str.toCharArray();
 
-    public static Pair<Character, Integer> getMostRepeatedCharacterFromString(String str) {
-        Map<Character, Integer> countMap = new HashMap<>();
-        char[] chars = str.toCharArray();
-        for (char ch : chars) {
-            if (!Character.isWhitespace(ch)) {
-                Integer currentCount = countMap.get(ch);
-                if (currentCount == null) {
-                    countMap.put(ch, 1);
-                } else {
-                    countMap.put(ch, ++currentCount);
-                }
+        HashMap < Character, Integer> charCount = new HashMap<Character,Integer>();
+
+        char output = ' ';
+        for(char c : chars){
+            if(charCount.containsKey(c)){
+                charCount.put(c, charCount.get(c) + 1);
+            } else{
+                charCount.put(c, 1);
+            }
+        
+        }final Integer mostCommon = Collections.max(charCount.values());
+        for(Entry<Character, Integer> entry : charCount.entrySet()){
+            if(entry.getValue() == mostCommon){
+                output = (char) entry.getKey();
             }
         }
-        Integer maxCharacterCount = Collections.max(countMap.values());
-        char maxCharacter = Character.MIN_VALUE;
-        for (Entry<Character, Integer> entry : countMap.entrySet()) {
-            maxCharacter = entry.getKey();
-            return Pair(str, maxCharacterCount);
-        }
-    
-        return Pair(str, maxCharacter);
+        return output;
+
     }
 
-    private static javafx.util.Pair<Character, Integer> Pair(String str, Integer maxCharacterCount) {
-        return null;
-    }
-
-    private static javafx.util.Pair<Character, Integer> Pair(String str, char maxCharacter) {
-        return null;
-    }
-
-    public static javafx.util.Pair<Character, Integer> Pair(Integer maxCharacterCount) {
-        return null;
-    }
-
-    public static Pair<Character, Integer> Pair(char maxCharacter) {
-        return null;
-    }
 }
+
+
+        //HashMap<Character, Integer> map = new HashMap<Character, Integer>(); 
+         //char maxappearchar = ' ';
+         //for (int i = 0; i < str.length(); i++){
+              //if (map.containsKey(str.charAt(i))){
+                //map.put(str.charAt(i), map.get(str.charAt(i)) + 1);
+              //}       
+              //else{
+                //map.put(str.charAt(i), 1);
+            //}           
+         //}  
+            //int maxValueInMap=(Collections.max(map.values()));  
+            //for (Entry<Character, Integer> entry:map.entrySet()){  
+                //if (entry.getValue()==maxValueInMap){
+                    //System.out.println(entry.getKey() + maxValueInMap);
+                    //maxappearchar = entry.getKey();
+               // }
+            //}
+            //return maxappearchar;
+        //} 
+    //}
